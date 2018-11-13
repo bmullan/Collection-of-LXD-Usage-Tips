@@ -1,4 +1,4 @@
-### NETWORK MANAGEMENT {#network-management}
+### NETWORK MANAGEMENT 
 
 By default, LXD does not listen to the network. To make it listen to the network following parameters can be set:
 
