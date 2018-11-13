@@ -29,7 +29,7 @@ output:
 all: &quot;|tee -a /tmp/cloud.out&quot;
 
 #hostname: {{ hostname }}
-
+ 
 bootcmd:
 
 - rm -f /etc/dpkg/dpkg.cfg.d/multiarch
