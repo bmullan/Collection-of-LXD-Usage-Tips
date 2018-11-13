@@ -56,7 +56,7 @@ See if the remote works:
 
 Create a image from a container (publish it)
 
-You need to delete the image first if you already have one with one of that aliases:
+You need to delete the image first if you already have one with that aliases:
 
 > **lxc delete \<server\>:ubuntu\/cn1\/amd64**
 
