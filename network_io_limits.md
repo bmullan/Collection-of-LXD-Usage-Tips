@@ -1,4 +1,4 @@
-### Network I/O Limits {#network-i-o-limits}
+### Network I/O Limits 
 
 There are two types of network limits that can be applied to containers.
 
