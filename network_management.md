@@ -27,3 +27,4 @@ $ lxc config set core.prox_https
 $ lxc config set core.prox_ignore_hosts
 
 Any communication initiated by LXD will use the proxy server except for the local image server.
+ 
