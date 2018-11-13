@@ -1,3 +1,5 @@
+![hand](https://user-images.githubusercontent.com/1682855/48437763-41ac2200-e750-11e8-985a-3958d99e40ee.png)
+
 ### Miscellaneous LXD Usage Tips/Hints Gathered from the Web 
 
 If you haven’t installed LXD yet then install and configure it on the container host computer or VM using either the APT or SNAP version of LXD.
