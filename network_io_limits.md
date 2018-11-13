@@ -11,3 +11,4 @@ $ lxc config device set container1 eth0 limits.egress 100Mbit
 Global network limits: It prioritizes the usage if the container accessing the network interface is saturated with network traffic.
 
 $ lxc config set container1 limits.network.priority 50
+ 
