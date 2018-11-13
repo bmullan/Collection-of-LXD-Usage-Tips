@@ -1,4 +1,4 @@
-### RESOURCE MANAGEMENT {#resource-management}
+### RESOURCE MANAGEMENT 
 
 LXD allows an efficient way to dynamically manage the resources like setting memory quotas, limiting CPU, I/O priorities and limiting disk usage. Resource allocation can be done on per container basis as well as globally through profiles. All limits can be configured in live environments where they can take effect immediately. In the below example, first command defines the limit on per container basis whereas the second sets the limits globally using profiles.
 
