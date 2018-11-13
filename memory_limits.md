@@ -1,4 +1,4 @@
-### Memory Limits {#memory-limits}
+### Memory Limits 
 
 LXD can also limit memory usage in various ways that are pretty simple to use.
 
