@@ -1,4 +1,4 @@
-### SNAPSHOT MANAGEMENT {#snapshot-management}
+### SNAPSHOT MANAGEMENT 
 
 Snapshots help in preserving the point in time running state of containers including container&#039;s filesystem, devices and configuration, if --stateful flag is used.
 
