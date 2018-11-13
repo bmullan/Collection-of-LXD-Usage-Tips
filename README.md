@@ -18,10 +18,6 @@ Create an image:
 
 > **$ lxd-images import lxc ubuntu xenial amd64 --alias xenial --alias ubuntu/xenial --alias ubuntu/xenial/amd64**
 
-Create the container “cn1” from the image “ubuntu/cn1/amd64” you just made:
-
-> **$ lxc launch ubuntu/xenial/amd64 cn1**
-
 You can Create an LXD container using a shortcut syntax. The following launches/creates an Ubuntu BIONIC (ie the “b”) container and calling it cn1.
 
 > **$ lxc launch ubuntu:b cn1**
