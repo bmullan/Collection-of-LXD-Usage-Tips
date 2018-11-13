@@ -1,48 +1,50 @@
-### CONTAINER MANAGEMENT {#container-management}
+### CONTAINER MANAGEMENT 
 
-LXD provides a very user-friendly command line interface to manage containers. One can perform activities like create, delete, copy, restart, snapshot, restore like many other activities to manage the containers.
+LXD provides a very user-friendly command line interface to manage containers. 
+
+One can perform activities like create, delete, copy, restart, snapshot, restore like many other activities to manage the containers.
 
 Creating a container with the below shown command is very easy, it will create a container with best supported Ubuntu image from ubuntu: image server, set a random name and start it.
 
-$ lxc launch ubuntu:
+> **$ lxc launch ubuntu:**
 
-Creating a container using latest, stable image of Ubuntu 12.04, set a random name and start it.
+Creating a container using latest, stable image of Ubuntu 16.04, set a random name and start it.
 
-$ lxc launch ubuntu:12.04
+> **$ lxc launch ubuntu:16.04**
 
-Creating a container using latest, stable image of Ubuntu 16.04, set name &quot;container0&quot; and start it.
+Creating a container using latest, stable image of Ubuntu 18.04, set the Container name to cn1 and start cn1.
 
-$ lxc launch ubuntu:16.04 container0
+> **$ lxc launch ubuntu:18.04 cn1**
 
-To create a container using CentOS 7 64-bit image, set name &quot;container2&quot; and start it, we first have to search the &quot;images:&quot; remote image server and copy the required alias name.
+To create a container using CentOS 7 64-bit image, set name to "centos1" and start it, we first have to search the &quot;images:&quot; remote image server and copy the required alias name.
 
-$ lxc image list images: | grep centos | grep amd
+> **$ lxc image list images: | grep centos | grep amd**
 
-$ lxc launch images:centos/7/amd64 container1
+> **$ lxc launch images:centos/7/amd64 centos1**
 
-Creating a container using OpenSuSE 13.2 64-bit image, set name &quot;container3&quot; without starting it.
+Creating a container using OpenSuSE 13.2 64-bit image, set name to "opensuse1" without starting it.
 
-$ lxc init images:opensuse/13.2/amd64 container2
+> **$ lxc init images:opensuse/13.2/amd64 opensuse1
 
 Remote image server &quot;ubuntu-daily&quot; can be used to create a container using latest development release of Ubuntu.
 
-Listing containers
+Listing local containers
 
-$ lxc list
+> **$ lxc list**
 
-Query detailed information of a particular container
+Query detailed information of a particular container (example cn1)
 
-$ lxc info container1
+> **$ lxc info cn1**
 
 Start, stop, stop forcibly and restart containers
 
-$ lxc start container1
+> **$ lxc start cn1**
 
-$ lxc stop container1
+> **$ lxc stop cn1**
 
-$ lxc stop container1 --force
+> **$ lxc stop cn1 --force**
 
-$ lxc restart container1
+> **$ lxc restart cn1**
 
 Stateful stop
 
@@ -52,22 +54,28 @@ To make the changes persistent across reboots, a container needs to be stopped i
 
 With the help of **_CRIU_**, the container state is written to the disk before shutting down. Next time the container starts, it restores the state previously written to disk.
 
-$ lxc stop container1 --stateful
+> **$ lxc stop cn1 --stateful**
 
 Pause containers
 
 Paused containers do not use CPU but still are visible _and continue using memory._
 
-$ lxc pause container1
+> **$ lxc pause cn1**
 
 Deletion and forceful deletion of containers
 
-$ lxc delete container1
+> **$ lxc delete cn1**
 
-$ lxc delete container1 --force
+> **$ lxc delete cn1 --force**
 
 Renaming Containers
 
-Just like the Linux move command renames a particular file or directory, similarly the containers can also be renamed. A running container cannot be renamed. Renaming a container doesnot change it&#039;s MAC address.
+Just like the Linux move command renames a particular file or directory, similarly the containers can also be renamed. 
 
-$ lxc move container1 new-container
+A running container cannot be renamed. 
+
+Renaming a container *does not change its MAC address*.
+
+example:  Rename container CN1 to CN2
+
+> **$ lxc move cn1 cn2**
