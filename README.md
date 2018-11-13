@@ -8,76 +8,76 @@ To install LXD on Ubuntu follow the instructions on the www.linuxcontainers.org 
 
 Set the remote authentication password:
 
->**lxc config set core.trust_password**
+> **$lxc config set core.trust_password**
 
 Change the default profile network interface:
 
-> **lxc profile edit default**                # Change lxcbr0 to your value.
+> **$ lxc profile edit default**                # Change lxcbr0 to your value.
 
 Create an image:
 
-> **lxd-images import lxc ubuntu xenial amd64 --alias xenial --alias ubuntu/xenial --alias ubuntu/xenial/amd64**
+> **$ lxd-images import lxc ubuntu xenial amd64 --alias xenial --alias ubuntu/xenial --alias ubuntu/xenial/amd64**
 
 Create the container “cn1” from the image “ubuntu/cn1/amd64” you just made:
 
-> **lxc launch ubuntu/xenial/amd64 cn1**
+> **$ lxc launch ubuntu/xenial/amd64 cn1**
 
 You can Create an LXD container using a shortcut syntax. The following launches/creates an Ubuntu BIONIC (ie the “b”) container and calling it cn1.
 
-> **lxc launch ubuntu:b cn1**
+> **$ lxc launch ubuntu:b cn1**
 
 Show the log if the above failed for some reason:
 
-> **lxc info cn1 --show-log**
+> **$ lxc info cn1 --show-log**
 
 Attach a shell on it:
 
-> **lxc exec cn1 bash**
+> **$ lxc exec cn1 bash**
 
 Delete the container you made:
 
-> **lxc delete cn1**
+> **$ lxc delete cn1**
 
 On your own system if you are using the APT version of LXD install the LXD client:
 
-> **sudo apt-add-repository -y ppa:ubuntu-lxc/stable**
+> **$ sudo apt-add-repository -y ppa:ubuntu-lxc/stable**
 
-> **sudo apt-get update**
+> **$ sudo apt-get update**
 
-> **sudo apt-get install lxd-client**
+> **$ sudo apt-get install lxd-client**
 
 Add a remote for the server you just configured (the following is a 1 liner):
 
-> **lxc remote add \<your-server-here\> https:\/\/\<your-server-fqdn-here\>:8443 --accept-certificate   # enter the password you've set above here.**
+> **$ lxc remote add \<your-server-here\> https:\/\/\<your-server-fqdn-here\>:8443 --accept-certificate   # enter the password you've set above here.**
 
 See if the remote works:
 
-> **lxc list \<put-the-server-name-here\>**
+> **$ lxc list \<put-the-server-name-here\>**
 
 Create a image from a container (publish it)
 
 You need to delete the image first if you already have one with that aliases:
 
-> **lxc delete \<server\>:ubuntu\/cn1\/amd64**
+> **$ lxc delete \<server\>:ubuntu\/cn1\/amd64**
 
 Now publish your container (make it available as image):
 
-> **lxc publish \<server\>:\<container\> \<server\>: --alias ubuntu/cn1 --alias ubuntu/cn1/amd64**
+> **$ lxc publish \<server\>:\<container\> \<server\>: --alias ubuntu/cn1 --alias ubuntu/cn1/amd64**
 
 Delete the image container if needed:
 
-> **lxc delete \<server\>:cn1**
+> **$ lxc delete \<server\>:cn1**
 
 Launch a new container from the image you created:
 
-> **lxc launch \<server>\:ubuntu/cn1 \<server\>:\<your-new-container-name\>**
+> **$ lxc launch \<server>\:ubuntu/cn1 \<server\>:\<your-new-container-name\>**
   
 You can also do:
 
-> **lxc init \<server\>:ubuntu/cn1 \<server\>:\<your-new-container-name\>**
+> **$ lxc init \<server\>:ubuntu/cn1 \<server\>:\<your-new-container-name\>**
   
-> **lxc start \<server\>:\<your-new-container-name\>**
+> **$ lxc start \<server\>:\<your-new-container-name\>**
   
 Start a shell in the new container:
 
-> **lxc exec \<server\>:\<new-container-name\> bash**
+> **$ lxc exec \<server\>:\<new-container-name\> bash**
