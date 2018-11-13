@@ -20,7 +20,7 @@ Create an image:
 
 Create the container “cn1” from the image “ubuntu/cn1/amd64” you just made:
 
-> **lxc launch ubuntu/xenial/amd64 cn1
+> **lxc launch ubuntu/xenial/amd64 cn1**
 
 You can Create an LXD container using a shortcut syntax. The following launches/creates an Ubuntu BIONIC (ie the “b”) container and calling it cn1.
 
@@ -62,7 +62,7 @@ You need to delete the image first if you already have one with that aliases:
 
 Now publish your container (make it available as image):
 
-> **lxc publish \<server\>:\<container\> \<server\>: --alias ubuntu/cn1 --alias ubuntu/cn1/amd64
+> **lxc publish \<server\>:\<container\> \<server\>: --alias ubuntu/cn1 --alias ubuntu/cn1/amd64**
 
 Delete the image container if needed:
 
@@ -76,7 +76,7 @@ You can also do:
 
 > **lxc init \<server\>:ubuntu/cn1 \<server\>:\<your-new-container-name\>**
   
-> **lxc start \<server\>:\<your-new-container-name\>
+> **lxc start \<server\>:\<your-new-container-name\>**
   
 Start a shell in the new container:
 
