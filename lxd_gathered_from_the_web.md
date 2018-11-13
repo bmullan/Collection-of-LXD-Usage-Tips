@@ -1,4 +1,4 @@
-### LXD Gathered from the Web {#lxd-gathered-from-the-web}
+### LXD Gathered from the Web 
 
 If you haven’t installed LXD yet then install and configure it on the container host computer or VM using either the APT or SNAP version of LXD.
 
