@@ -1,4 +1,4 @@
-### IMAGE MANAGEMENT {#image-management}
+### IMAGE MANAGEMENT 
 
 When a container is created from a remote image, LXD downloads the image by pulling its full hash, short hash or alias into it&#039;s image store, marks it as cached and records it&#039;s origin.
 
@@ -10,39 +10,39 @@ LXD can simply cache the image locally by copying the remote image into the loca
 
 Below example will simply copy the Ubuntu 14.04 image into the local image store and create a filesystem for it.
 
-$ lxc image copy ubuntu:14.04 local
+> **$ lxc image copy ubuntu:18.04 local**
 
 We can also provide an alias name for the fingerprint that will be generated for the new image. Specifying alias name is an easy way to remember the image.
 
-$ lxc image copy ubuntu:14.04 local: --alias ubuntu1404
+> **$ lxc image copy ubuntu:18.04 local: --alias ubuntu1804**
 
 It is also possible to use the alias that are already set on the remote image server. LXD can also keep the local image updated just like the images that are cached by specifying the &quot;--auto-update&quot; flag while importing the image.
 
-$ lxc image copy images:centos/6/amd64 local: --copy-aliases --auto-update
+> **$ lxc image copy images:centos/6/amd64 local: --copy-aliases --auto-update**
 
 Later we can create a container using these local images.
 
-$ lxc launch centos/6/amd64 c2-centos6
+> **$ lxc launch centos/6/amd64 c2-centos6**
 
 From Tarballs to Local Image Store
 
-Alternatively, containers can also be made from images that are created using tarballs. These tarballs can be downloaded fromlinuxcontainers.org. There we can find one LXD metadata tarball and filesystem image tarball.
+Alternatively, containers can also be made from images that are created using tarballs. These tarballs can be downloaded from www.linuxcontainers.org. There we can find one LXD metadata tarball and filesystem image tarball.
 
 The below example will import an image using both tarballs and assign an alias &quot;imported-ubuntu&quot;.
 
-$ lxc image import meta.tar.xz rootfs.tar.xz --alias imported-ubuntu
+> **$ lxc image import meta.tar.xz rootfs.tar.xz --alias imported-ubuntu**
 
 From URL to Local Image Store
 
 LXD also facilitates importing of images from a local webserver in order to create containers. Images can be pulled using their LXD-image-URL and ultimately get stored in the image store.
 
-$ lxc image import http://imageserver.org/lxd/images --alias opensuse132-amd64
+> **$ lxc image import http://imageserver.org/lxd/images --alias opensuse132-amd64**
 
 Exporting Images
 
 The images of running containers stored in local image store can also be exported to tarballs.
 
-$ lxc image export
+> **$ lxc image export**
 
 Exporting images creates two tarballs: metadata tarball containing the metadata bits that LXD uses and filesystem tarball containing the root filesystem to bootstrap new containers.
 
@@ -52,11 +52,11 @@ Creating Images using Containers
 
 To create an image, stop the container whose image you want to publish in the local store, then we can create a new container using the new image.
 
-$ lxc publish container1 --alias new-c1s1
+> **$ lxc publish container1 --alias new-c1s1**
 
 A snapshot of a container can also be used to create images.
 
-$ lxc publish container1/c1s1 --alias new-snap-image
+> **$ lxc publish container1/c1s1 --alias new-snap-image**
 
 Creating Images Manually
 
@@ -168,7 +168,7 @@ template: upstart-override.tpl
 
 5\. Import both the tarballs as LXD images.
 
-$ lxc image import **Illegal HTML tag removed :** <meta.tar.gz>--alias imported-container</meta.tar.gz>
+> **$ lxc image import \<rootfs.tar.gz\> \<meta.tar.gz\> --alias imported-container
 
 LXD is very likely going to deprecate the lxd-images import functionality for LXD. The image servers are much more efficient for this task.
 
@@ -180,26 +180,30 @@ $ lxc config set core.https_address &quot;[::]:8443&quot;
 
 2\. Add public image server in the client machines.
 
-$ lxc remote add **Illegal HTML tag removed :** <ip-address>--public</ip-address>
-
+> **$ lxc remote add \<public-image-server\> \<IP-Address\> --public**
+  
 Adding a remote server as public provides an authentication-less connection between client and server. Still, the images that are marked as private in public image server cannot be accessed by the client.
 
 Images can be marked as public / private using &quot;lxc image edit&quot; command described above in previous sections.
 
 Listing available remote image servers
 
-$ lxc remote list
+> **$ lxc remote list**
 
 List images in images: remote server
 
-$ lxc image list images:
+> **$ lxc image list images:**
 
 List images using filters
 
-$ lxc image list amd64
+> **$ lxc image list amd64**
 
-$ lxc image list os=ubuntu
+> **$ lxc image list os=ubuntu**
+
+or say for alpine...
+
+> **$ lxc image list os=alpine**
 
 Get detailed information of an image
 
-$ lxc image info ubuntu
+> **$ lxc image info ubuntu**
