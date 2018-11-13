@@ -35,7 +35,7 @@ Attach a shell on it:
 Delete the container you made:
 
 > **$ lxc delete cn1**
-
+ 
 Only if you are using the APT version of LXD install the LXD client:
 
 > **$ sudo apt-add-repository -y ppa:ubuntu-lxc/stable**
