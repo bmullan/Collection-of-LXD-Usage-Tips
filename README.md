@@ -2,6 +2,8 @@
 
 # Collection of LXD Usage Tips
 
+***NOTE - I've been asked to convert the original .ODT to Markdown so I have deleted the original .ODT and will repost as soon as I have a converted .MD doc available.***
+
 A collection of LXD tips/hints I've found online over time related to how to use/configure/manage LXD containers.
 
 Please feel free to contribute to improving the information in this LibreOffice document.
