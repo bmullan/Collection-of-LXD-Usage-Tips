@@ -1,3 +1,3 @@
-# Everything LXD {#everything-lxd}
+# Everything LXD 
 
 Everything LXD
