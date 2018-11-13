@@ -23,7 +23,7 @@ A detailed snapshot information related to container1 like snapshot name, statel
 $ lxc info container1
 
 Restoring snapshot
-
+ 
 $ lxc restore container1 c1s1
 
 Renaming snapshot
