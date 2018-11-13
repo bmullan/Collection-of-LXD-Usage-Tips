@@ -1,1 +1,0 @@
-### A Collection of Miscellaneous Information about {#a-collection-of-miscellaneous-information-about}
