@@ -6,7 +6,8 @@ If you haven’t installed LXD yet then install and configure it on the containe
 
 [To install LXD on Ubuntu follow the instructions on the linuxcontainers.org website.](https://linuxcontainers.org/lxd/getting-started-cli/)
 
-## Miscellaneous LXD Usage Tips/Hints Gathered from the Web 
+Miscellaneous LXD Usage Tips/Hints Gathered from the Web 
+========================================================
 
 Set the remote authentication password:
 
