@@ -8,8 +8,6 @@ If you haven’t installed LXD yet then install and configure it on the containe
 
 [To install LXD on Ubuntu follow the instructions on the linuxcontainers.org website.](https://linuxcontainers.org/lxd/getting-started-cli/)
 
-[https://linuxcontainers.org/lxd/getting-started-cli/](https://linuxcontainers.org/lxd/getting-started-cli/)
-
 Set the remote authentication password:
 
 > **$lxc config set core.trust_password**
