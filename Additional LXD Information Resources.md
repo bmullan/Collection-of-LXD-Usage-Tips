@@ -10,7 +10,7 @@ The [LXD User's Forum](https://discuss.linuxcontainers.org/) where developers an
 
 The **LXD Sub-Reddit**:  https://www.reddit.com/r/LXD/
 
-The engineering lead for LXD, Stephane Graber has an extensive group of posts about LXD on his own website:  https://stgraber.org/
+The LXD Project lead, Stephane Graber, has an extensive group of posts about LXD on his own website:  https://stgraber.org/
 
 Stephane Graber had also previously published [an extensive 12 Part series on LXD](https://stgraber.org/2016/03/11/lxd-2-0-blog-post-series-012/) 
 which while a couple years old now still has a wealth of great information.
