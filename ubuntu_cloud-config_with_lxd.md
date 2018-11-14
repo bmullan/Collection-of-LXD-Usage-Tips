@@ -16,7 +16,7 @@ To create/install “user-data” create a file named .yaml. The name can be any
 
 Then start the LXC container:
 
-lxc launch ubuntu:16.04 cn2 -c user.user-data=&quot;$(cat .yaml)&quot;
+> **$ lxc launch ubuntu:16.04 cn2 -c user.user-data=&quot;$(cat .yaml)&quot;**
 
 That is all there is to it.
 
