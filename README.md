@@ -1,14 +1,12 @@
 ![hand](https://user-images.githubusercontent.com/1682855/48437763-41ac2200-e750-11e8-985a-3958d99e40ee.png)
 
-### Miscellaneous LXD Usage Tips/Hints Gathered from the Web 
-
 *Please feel free to add/correct content or improve readability of anything in these documents.*
 
 If you haven’t installed LXD yet then install and configure it on the container host computer or VM using either the APT or SNAP version of LXD.
 
 [To install LXD on Ubuntu follow the instructions on the linuxcontainers.org website.](https://linuxcontainers.org/lxd/getting-started-cli/)
 
-####Miscellaneous LXD Commands and Usage Examples
+### Miscellaneous LXD Usage Tips/Hints Gathered from the Web 
 
 Set the remote authentication password:
 
