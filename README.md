@@ -6,7 +6,7 @@
 
 If you haven’t installed LXD yet then install and configure it on the container host computer or VM using either the APT or SNAP version of LXD.
 
-To install LXD on Ubuntu follow the instructions on the www.linuxcontainers.org website:
+[To install LXD on Ubuntu follow the instructions on the linuxcontainers.org website.](https://linuxcontainers.org/lxd/getting-started-cli/)
 
 [https://linuxcontainers.org/lxd/getting-started-cli/](https://linuxcontainers.org/lxd/getting-started-cli/)
 
