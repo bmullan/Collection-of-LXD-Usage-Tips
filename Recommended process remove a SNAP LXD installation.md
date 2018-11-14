@@ -1,4 +1,4 @@
-###The recommended process to completely remove a SNAP LXD installation
+###Recommended process to remove a SNAP LXD installation
 
 Installing LXD using SNAP is becoming the recommended method over the traditional APT install process.
 
