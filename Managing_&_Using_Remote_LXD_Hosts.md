@@ -110,7 +110,7 @@ would display information about CN1 and at the bottom of that information would 
 the new container**
 
 example:
-> ** lxc copy cn1/cn1-snap0 host2:cn1**
+> **lxc copy cn1/cn1-snap0 host2:cn1**
 
 The above would copy snapshot cn1-snap0 to host2 and create a new container named cn1 _**without having to stop Host1's CN1 
 container**_.
