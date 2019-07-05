@@ -1,4 +1,4 @@
-### Using Remote LXD Hosts 
+### Managing and Using Remote LXD Hosts 
 
 LXD supports the capability to manage (create/start/stop/freeze/unfreeze/delete etc) LXD containers on Remote LXD Host/Servers. 
 
