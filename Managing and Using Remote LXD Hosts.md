@@ -51,6 +51,11 @@ where:  _<alias>_ is any "name" you want to use _to reference_ the Host at IP 14
 The above command will result in you being prompted to accept a "key" for the Remote host and then you will also be prompted for 
 the Trust Password you set for the Remote Host.
 
+example:
+> **lxc remote add host2 143.23.118.43**
+
+The above would add a _remote LXD host/server_ you want to reference as **host2** to your local host.
+
 #### Copying an LXD container from LXD Host1 to LXD Host2
 
 example assumptions:  
